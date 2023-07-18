@@ -130,3 +130,57 @@
         </div>
     </body>
 </html>
+
+
+ <!-- <?= $task_deadline = strtotime($classdatum->deadline); ?>
+
+                <script>
+                var date = new Date()
+                let diftime = {{$task_deadline}} - date.getTime() / 1000;
+                let timestamp = () => {
+                    diftime--;
+                } 
+                    var nowTimeStamp = setInterval(() => {
+                        timestamp();
+                        
+                        var diffTime_seconds = diftime % 60;
+
+                    var difMinutes = (diftime - diffTime_seconds) / 60;
+                    var diffTime_minutes = difMinutes % 60;
+
+                    var difHours = (difMinutes - diffTime_minutes) / 60;
+                    var diffTime_hours = difHours % 24;
+
+                    var difDays = (difHours - diffTime_hours) / 24;
+                    
+                    console.log('残り' + difDays + '日' + diffTime_hours + '時間' + diffTime_minutes + '分' + diffTime_seconds + '秒')
+                        
+                    // if(difftime === 0) {
+                    //     clearInterval(nowTimeStamp)
+                    // }
+                    }, 1000); 
+
+                    
+                </script>
+                
+                <?php
+                
+                $difftime = strtotime($classdatum->deadline) - strtotime('now');
+                // 秒の差を取得
+                $diffTime_seconds = $difftime % 60;
+ 
+                //分の差を取得
+                $difMinutes = ($difftime - $diffTime_seconds) / 60;
+                $diffTime_minutes = $difMinutes % 60;
+                
+                //時の差を取得
+                $difHours = ($difMinutes - $diffTime_minutes) / 60;
+                $diffTime_hours = $difHours % 24;
+
+                // 日の差を取得
+                $difDays = ($difHours - $diffTime_hours) / 24;
+                ?>
+               
+                <p>提出期限まで残り{{$difDays}}日{{$diffTime_hours}}時間{{$diffTime_minutes}}分{{$diffTime_seconds}}秒</p>
+
+                   -->
