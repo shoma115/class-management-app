@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('classdata', function (Blueprint $table) {
+        Schema::create('class_data', function (Blueprint $table) {
             $table->id();
             $table->string('class_name');
             $table->string('class_week_day');

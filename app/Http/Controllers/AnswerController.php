@@ -15,9 +15,7 @@ class AnswerController extends Controller
         $answer->content_answer = $request->input('content_answer');
         $answer->question_id = $question->id;
         $answer->user_id = Auth::id();
-        $answer->user_name = Auth::user()->name;
         $question->comments++;
-
         $answer->save();
         $question->save();
 

@@ -39,7 +39,7 @@ use Illuminate\Support\Facades\Auth;
                                         <img class="m-2" src="{{asset('resolved.img/23926895.png')}}" width="50" height="50">
                                     </div>
                                 @endif
-                                <h5>質問者:&ensp;{{ $question->user_name}}</h5>                   
+                                <h5>質問者:&ensp;{{ $question->user->name}}</h5>                   
                                 <h1 class="fw-bold">{{ $question->title }}</h1>
                                 <h3>内容:</h3>
                                 <p>{{ $question->content }}</p>
@@ -167,7 +167,7 @@ use Illuminate\Support\Facades\Auth;
                                     </div>
                                 @endif
                                 
-                                        <p>ユーザー:&ensp;{{$answer->user_name}}</p>
+                                        <p>ユーザー:&ensp;{{$answer->user->name}}</p>
                                         <div id ="{{ $k }}">
                                             <p id = "{{ $i }}">{{ $answer->content_answer }}</p>
                                         </div>

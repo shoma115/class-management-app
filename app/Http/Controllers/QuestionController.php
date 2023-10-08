@@ -40,7 +40,6 @@ class QuestionController extends Controller
         $question->title = $request->input('title');
         $question->content = $request->input('content');
         $question->user_id = Auth::id();
-        $question->user_name = Auth::user()->name;
         $question->comments = 0;
         $question->save();
 
@@ -56,7 +55,6 @@ class QuestionController extends Controller
            
             return $count_nice->sum('count');
         });
-        
         
         return view('question.show', ['question' => $question, 'answers' => $answers, 'sum_nice' => $sumNice, 'group_by' => $groupBy]);
     }
