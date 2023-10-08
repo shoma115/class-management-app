@@ -13,10 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('question_nices', function (Blueprint $table) {
+        Schema::create('credited_classes', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->constrained();
-            $table->foreignId('question_id')->constrained();
+            $table->foreignId('user_id')->constrained()->cacadeOnDelete();
+            $table->string("class_name");
+            $table->string('teacher_name')->nullable(true);
+            $table->integer('amount_credit');
+            $table->string('division_1')->nullable(true);
+            $table->string('division_2')->nullable(true);
             $table->timestamps();
         });
     }
@@ -28,6 +32,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('question_nices');
+        Schema::dropIfExists('credited_classes');
     }
 };

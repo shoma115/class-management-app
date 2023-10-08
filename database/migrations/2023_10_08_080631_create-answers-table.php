@@ -13,8 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::table('nices', function (Blueprint $table) {
-            $table->foreignId('post_id')->constrained();
+        Schema::create('answers', function (Blueprint $table) {
+            $table->id();
+            $table->foreignId('user_id')->constrained()->cacadeOnDelete();
+            $table->foreignId('question_id')->constrained()->cacadeOnDelete();
+            $table->text('content_answer');
+            $table->timestamps();
         });
     }
 
@@ -25,8 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::table('nices', function (Blueprint $table) {
-            //
-        });
+        Schema::dropIfExists('answers');
     }
 };

@@ -73,11 +73,13 @@
                                             $evaluation = ['分らない','テスト(1回)のみ', 'テスト(複数回)のみ', 'レポート(期末あり)のみ', 'レポート(期末なし)のみ', '出席のみ', 'テスト+レポート', 'レポート+出席', 'テスト+出席', 'テスト+レポート+出席'];
                                         ?>
                                             @for($i = 0; $i < count($evaluation); $i++)
-                                            @if( old('evaluation') === $evaluation[$i])
-                                            <option selected>{{ $evaluation[$i] }}</option>
-                                            @else
-                                            <option>{{ $evaluation[$i] }}</option>
-                                            @endif
+                                                @if( old('evaluation') === $evaluation[$i])
+                                                    <option selected>{{ $evaluation[$i] }}</option>
+                                                @elseif($classdatum->evaluation === $evaluation[$i])
+                                                    <option selected>{{ $evaluation[$i] }}</option>
+                                                @else
+                                                    <option>{{ $evaluation[$i] }}</option>
+                                                @endif
                                             @endfor   
                                     </select>
                                 </td>
@@ -92,11 +94,13 @@
                                             $attendance = ['分らない', '毎回とる', 'たまにとる', 'とらない'];
                                         ?>
                                             @for($i = 0; $i < count($attendance); $i++)
-                                            @if( old('evaluation') === $attendance[$i])
-                                            <option selected>{{ $attendance[$i] }}</option>
-                                            @else
-                                            <option>{{ $attendance[$i] }}</option>
-                                            @endif
+                                                @if( old('attendance') === $attendance[$i])
+                                                    <option selected>{{ $attendance[$i] }}</option>
+                                                @elseif($classdatum->attendance === $attendance[$i])
+                                                    <option selected>{{ $attendance[$i] }}</option>
+                                                @else
+                                                    <option>{{ $attendance[$i] }}</option>
+                                                @endif
                                             @endfor   
                                     </select>
                                 </td>
@@ -154,7 +158,7 @@
                                     <label class="fs-5 fw-bold" >単位数</label>
                                 </td>
                                 <td>
-                                    <input class="form-control" type="number" name="amount_credit" min="1" value="{{ old('amount_credit', $classdatum->amout_credit) }}">
+                                    <input class="form-control" type="number" name="amount_credit" min="1" value="{{ old('amount_credit', $classdatum->amount_credit) }}">
                                 </td>
                             </tr>
                             <tr>

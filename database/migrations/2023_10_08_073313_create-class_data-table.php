@@ -15,11 +15,18 @@ return new class extends Migration
     {
         Schema::create('class_data', function (Blueprint $table) {
             $table->id();
-            $table->string('class_name');
+            $table->foreignId('user_id')->constrained()->cacadeOnDelete();
+            $table->string("class_name");
+            $table->string('teacher_name')->nullable(true);
             $table->string('class_week_day');
             $table->integer('class_time');
-            $table->string('class_place');
-            $table->integer('amout_credit');
+            $table->string('class_place')->nullable(true);
+            $table->integer('amount_credit');
+            $table->string('evaluation')->nullable(true);
+            $table->string('attendance')->nullable(true);
+            $table->timestamp('deadline')->nullable(true);
+            $table->string('division_1')->nullable(true);
+            $table->string('division_2')->nullable(true);
             $table->timestamps();
         });
     }
@@ -31,6 +38,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('data');
+        Schema::dropIfExists('class_data');
     }
 };

@@ -199,7 +199,7 @@
                         </script>
 
                         <label>単位数<span style="color:red">【必須】</span></label>
-                        <input type="number" name="amout_credit" value="{{ old('amout_credit', $classdatum->amout_credit) }}" required>
+                        <input type="number" name="amount_credit" value="{{ old('amount_credit', $classdatum->amount_credit) }}" required>
                     </div>
                     <button type="submit" class="button-all btn text-white rounded-pill m-2" name="submit" value="create">更新</button>
                 </form>

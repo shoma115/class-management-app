@@ -13,8 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::table('answers', function (Blueprint $table) {
+        Schema::create('questions', function (Blueprint $table) {
+            $table->id();
             $table->foreignId('user_id')->constrained()->cacadeOnDelete();
+            $table->string('title');
+            $table->text('content');
+            $table->boolean('resolved')->default(false);
+            $table->integer('comments');
+            $table->timestamps();
         });
     }
 
@@ -25,8 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::table('answers', function (Blueprint $table) {
-            //
-        });
+        Schema::dropIfExists('questions');
     }
 };

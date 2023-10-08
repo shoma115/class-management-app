@@ -197,7 +197,7 @@
 
 
                         <label class="fs-5 fw-bold" required>単位数<span style="color:red">【必須】</span></label>
-                        <input type="number" name="amount_credit" value="{{ old('amout_credit') }}">
+                        <input type="number" name="amount_credit" value="{{ old('amount_credit') }}">
                     </div>
                     <button type="submit" class="button-all btn text-white rounded-pill m-2" name="submit" value="create">登録</button>
                 </form>

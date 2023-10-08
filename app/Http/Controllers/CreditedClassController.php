@@ -87,7 +87,7 @@ class CreditedClassController extends Controller
       $creditedclass->teacher_name = $classdatum->teacher_name;
       $creditedclass->division_1 = $classdatum->division_1;
       $creditedclass->division_2 = $classdatum->division_2;
-      $creditedclass->amount_credit = $classdatum->amout_credit;
+      $creditedclass->amount_credit = $classdatum->amount_credit;
       $creditedclass->user_id = Auth::id();
       $creditedclass->save();
 
@@ -104,7 +104,7 @@ class CreditedClassController extends Controller
          $creditedclass->teacher_name = $classdatum->teacher_name;
          $creditedclass->division_1 = $classdatum->division_1;
          $creditedclass->division_2 = $classdatum->division_2;
-         $creditedclass->amount_credit = $classdatum->amout_credit;
+         $creditedclass->amount_credit = $classdatum->amount_credit;
          $creditedclass->user_id = Auth::id();
          $creditedclass->save();
 

@@ -64,6 +64,7 @@
                                 @endif
                             </div>
                         </div>
+                        <a class="d-flex justify-content-center mt-5"href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">新規登録</a>
                     </form>
                 </div>
             </div>

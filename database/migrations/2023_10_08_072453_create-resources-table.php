@@ -15,12 +15,16 @@ return new class extends Migration
     {
         Schema::create('resources', function (Blueprint $table) {
             $table->id();
-            $table->string('class_name');
-            $table->string('teacher_name');
+            $table->string("class_name");
+            $table->string('teacher_name')->nullable(true);
             $table->string('class_week_day');
             $table->integer('class_time');
-            $table->string('class_place');
+            $table->string('class_place')->nullable(true);
             $table->integer('amount_credit');
+            $table->string('evaluation')->nullable(true);
+            $table->string('attendance')->nullable(true);
+            $table->string('division_1')->nullable(true);
+            $table->string('division_2')->nullable(true);
             $table->timestamps();
         });
     }

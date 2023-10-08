@@ -33,7 +33,7 @@ class ClassDatumController extends Controller
         $classdatum->class_week_day = $resource->class_week_day;
         $classdatum->class_time = $resource->class_time;
         $classdatum->class_place = $resource->class_place;
-        $classdatum->amout_credit = $resource->amount_credit;
+        $classdatum->amount_credit = $resource->amount_credit;
         $classdatum->teacher_name = $resource->teacher_name;
         $classdatum->evaluation = $resource->evaluation;
         $classdatum->attendance = $resource->attendance;
@@ -63,14 +63,14 @@ class ClassDatumController extends Controller
                 'class_name' => 'required',
                 'class_week_day' => 'required',
                 'class_time' => 'required|integer',
-                'amout_credit' => 'required|integer',
+                'amount_credit' => 'required|integer',
                 'division1' => 'required'
             ]);
             $classdatum->class_name = $request->input('class_name');
             $classdatum->class_week_day = $request->input('class_week_day');
             $classdatum->class_time = $request->input('class_time');
             $classdatum->class_place = $request->input('class_place');
-            $classdatum->amout_credit = $request->input('amout_credit');
+            $classdatum->amount_credit = $request->input('amount_credit');
             $classdatum->teacher_name = $request->input('teacher_name');
             $classdatum->division_1 = $request->input('division1');
             $classdatum->division_2 = $request->input('division2');

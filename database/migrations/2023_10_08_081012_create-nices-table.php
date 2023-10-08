@@ -13,8 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::table('class_data', function (Blueprint $table) {
-            $table->timestamp('deadline')->nullable(true);
+        Schema::create('nices', function (Blueprint $table) {
+            $table->id();
+            $table->foreignId('user_id')->constrained()->cacadeOnDelete();
+            $table->foreignId('post_id')->constrained()->cacadeOnDelete();
+            $table->integer('count')->default(1);
+            $table->timestamps();
         });
     }
 
@@ -25,8 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::table('class_data', function (Blueprint $table) {
-            //
-        });
+        Schema::dropIfExists('nices');
     }
 };

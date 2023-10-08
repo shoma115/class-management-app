@@ -34,7 +34,7 @@
                             <h3><span style="color: #00cc74;">科目枠組2</span>&emsp;{{ $classdatum->division_2 }}</h3>
                         </li>          
                         <li class="list-group-item">
-                            <h3><span style="color: #00cc74;">取得可能単位数</span>&emsp;{{ $classdatum->amout_credit }}</h3>
+                            <h3><span style="color: #00cc74;">取得可能単位数</span>&emsp;{{ $classdatum->amount_credit }}</h3>
                         </li>
                     </ul>                       
                 </div>               
