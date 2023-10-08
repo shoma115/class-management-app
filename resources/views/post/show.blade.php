@@ -39,9 +39,6 @@ use Illuminate\Support\Facades\Auth;
                             <h4><span class="fw-bold">内容の面白さ:</span>&emsp;<span class="fs-1" style="color: #ffcc00;">{{ str_repeat('★', $post->interesting) }}</span><span class="fs-1" style="color: #ccc;">{{ str_repeat('★', 5 - $post->interesting) }}</span></h4>
                         </li>
                         <li class="list-group-item">
-                            <h5><span class="fw-bold">受講生数の変化<br>(履修変更期間中):</span>&emsp;{{ $post->students_amount }}</h5>
-                        </li>
-                        <li class="list-group-item">
                             <h4><span class="fw-bold">評価方法:</span>&emsp;{{ $post->evaluation }}</h4>
                         </li>
                         <li class="list-group-item">

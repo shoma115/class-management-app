@@ -38,7 +38,6 @@ class PostController extends Controller
             'class_name' => 'required',
             'difficulty_level' => 'required|integer',
             'interesting' =>  'required|integer',
-            'students_amount' =>  'required',
             'evaluation' =>  'required',
             'attendance' =>  'required',
             'teacher_name' => 'required',
@@ -53,7 +52,6 @@ class PostController extends Controller
         $post->class_week_day = $request->input('class_week_day');
         $post->class_time = $request->input('class_time');
         $post->interesting = $request->input('interesting');
-        $post->students_amount = $request->input('students_amount');
         $post->evaluation = $request->input('evaluation');
         $post->attendance = $request->input('attendance');
        
@@ -82,7 +80,6 @@ class PostController extends Controller
             'difficulty_level' => 'required|integer',
             'teacher_name' => 'required',
             'interesting' =>  'required|integer',
-            'students_amount' =>  'required',
             'evaluation' =>  'required',
             'attendance' =>  'required',
             'class_week_day' => 'required',
@@ -93,7 +90,6 @@ class PostController extends Controller
         $post->difficulty_level	= $request->input('difficulty_level');
         $post->teacher_name = $request->input('teacher_name');
         $post->interesting = $request->input('interesting');
-        $post->students_amount = $request->input('students_amount');
         $post->evaluation = $request->input('evaluation');
         $post->attendance = $request->input('attendance');
         $post->class_week_day = $request->input('class_week_day');
@@ -124,7 +120,6 @@ class PostController extends Controller
             'class_time' => 'required|integer',
             'amount_credit' => 'required|integer',
             'interesting' =>  'required|integer',
-            'students_amount' =>  'required',
             'evaluation' =>  'required',
             'attendance' =>  'required',
         ]);
@@ -134,7 +129,6 @@ class PostController extends Controller
         $post->difficulty_level	= $request->input('difficulty_level');
         $post->teacher_name = $request->input('teacher_name');
         $post->interesting = $request->input('interesting');
-        $post->students_amount = $request->input('students_amount');
         $post->evaluation = $request->input('evaluation');
         $post->attendance = $request->input('attendance');
         $post->class_week_day = $request->input('class_week_day');

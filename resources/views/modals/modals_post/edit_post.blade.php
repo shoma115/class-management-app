@@ -60,22 +60,6 @@
                                         @endfor
                                        
                                     </div>
-                                <label class="fs-6 fw-bold">受講生数の変化(履修変更期間中)</label>
-                                    <select class="form-control" name="students_amount">
-                                        <?php
-                                            $students_amount = ['とても増えた', '増えた', '変わらなかった', '減った', 'とても減った', '分からない'];
-                                        ?>
-                                            @for($i = 0; $i < 6; $i++)
-                                            @if( old('students_amount') === $students_amount[$i])
-                                                <option selected>{{ $students_amount[$i] }}</option>
-                                            @elseif($post->students_amount === $students_amount[$i])
-                                                <option selected>{{ $students_amount[$i] }}</option>
-                                            @else
-                                                <option>{{ $students_amount[$i] }}</option>
-                                            @endif
-                                            @endfor   
-                                    </select>
-                               
                                     <label class="fs-5 fw-bold">評価方法</label>
                                     <select class="form-control" name="evaluation">
                                     <?php
