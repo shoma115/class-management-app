@@ -8,6 +8,18 @@
                 @include('modals.modals_classdata.edit_classdata')
                 @include('modals.modals_classdata.delete_classdata')
                 @include('modals.modals_classdata.add_credited_from')
+                <div class="button">
+                    <button type="button" class="btn btn-outline-secondary rounded-pill mx-2 mt-5" data-bs-toggle = "modal" data-bs-target = "#editClassDatum{{ $classdatum->id }}">
+                        <img src="{{ asset('edit.img\ブログの投稿、編集アイコン素材.png') }}" width="30">編集
+                    </button>
+                    
+                    <button type="button"  class="btn btn-outline-secondary rounded-pill mx-2 mt-5" data-bs-toggle = "modal" data-bs-target = "#addCreditedFromClassDatum{{ $classdatum->id }}">
+                        履修済に登録
+                    </button>
+                    <button type="button"  class="btn btn-outline-secondary rounded-pill mx-2 mt-5" data-bs-toggle = "modal" data-bs-target = "#deleteClassdatum{{ $classdatum->id }}">
+                        <img src="{{ asset('delete.img\trash-can_115312.png') }}" width="20">&thinsp;<span style="color: red">削除</span>
+                    </button>
+                </div>
 
                 <h1 class="fw-bold m-4 ">{{ $classdatum->class_name }}</h1>
                 <div class="card">
@@ -38,18 +50,5 @@
                         </li>
                     </ul>                       
                 </div>               
-                
-                <div class="button">
-                    <button type="button" class="btn btn-outline-secondary rounded-pill mx-2 mt-5" data-bs-toggle = "modal" data-bs-target = "#editClassDatum{{ $classdatum->id }}">
-                        <img src="{{ asset('edit.img\ブログの投稿、編集アイコン素材.png') }}" width="30">編集
-                    </button>
-                    
-                    <button type="button"  class="btn btn-outline-secondary rounded-pill mx-2 mt-5" data-bs-toggle = "modal" data-bs-target = "#addCreditedFromClassDatum{{ $classdatum->id }}">
-                        履修済に登録
-                    </button>
-                    <button type="button"  class="btn btn-outline-secondary rounded-pill mx-2 mt-5" data-bs-toggle = "modal" data-bs-target = "#deleteClassdatum{{ $classdatum->id }}">
-                        <img src="{{ asset('delete.img\trash-can_115312.png') }}" width="20">&thinsp;<span style="color: red">削除</span>
-                    </button>
-                </div>
             </article>
         @endsection
