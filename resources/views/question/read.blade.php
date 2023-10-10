@@ -80,7 +80,7 @@
             </script>
             
             </div>
-            <div class = "pb-5">
+            <div>
                     @foreach($questions as $question)
                     <div class="card">
                        <div class="card-body d-flex">

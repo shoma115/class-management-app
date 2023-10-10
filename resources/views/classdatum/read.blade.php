@@ -14,7 +14,7 @@
                 </div>
             </nav>
 
-            <article class="pb-5">
+            <article class="pb-2">
                 
                          
                 <table class="table p-0 border">

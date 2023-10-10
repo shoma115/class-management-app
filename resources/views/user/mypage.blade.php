@@ -19,7 +19,7 @@
             </form>
         </div>
         
-        <div class="mb-5 card">
+        <div class="card">
             <ul class="list-group list-group-flush">
                 <li class="list-group-item">
                     <a href="{{ route('nice.review') }}">いいねを付けたレビューを見る<a>

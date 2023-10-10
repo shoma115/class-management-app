@@ -13,7 +13,7 @@
                     @endforeach
                 </div>
                 <a class="button-all btn text-white rounded-pill mx-2" href="{{ route('credited.select')}}">単位取得済み授業を登録</a>
-                <div class="pb-5">
+                <div>
                     <table class="table">
                             <tr>
                                 <th>授業名</th>

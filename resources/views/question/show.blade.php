@@ -149,7 +149,7 @@ use Illuminate\Support\Facades\Auth;
                 @foreach($answers as $answer)
                     <!--　回答の削除のモーダル -->
                     @include('modals.modals_answers.delete_answer')
-                    <div class="mb-5 card">
+                    <div class="card">
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item">
                                 <!-- 回答のuser_idとログイン中のユーザのIDが一致したときのみ編集メニューを表示させる -->

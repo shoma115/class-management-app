@@ -50,7 +50,7 @@
                     })
                 </script>
                 
-                <div class="pb-5">
+                <div>
                     <table class="table">
                         <tr>
                             <th>授業名</th>

@@ -1,6 +1,6 @@
 @extends('layouts.app')
     @section('content')
-            <article class="pb-5 mb-5">
+            <article>
                 <a href="{{ route('classdata.read') }}">
                     <img class="back-button" src="{{ asset('backbutton.img\プレゼンテーション4-removebg-preview.png') }}" width="30">
                 </a>

@@ -51,7 +51,7 @@ use Illuminate\Support\Facades\Auth;
                 <?php
                     $j = 1;
                 ?>
-                <div class="pb-5"> 
+                <div> 
                 @foreach($posts as $post)
                     <div class="card">
                         <div class="card-body">

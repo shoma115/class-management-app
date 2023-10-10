@@ -1,6 +1,6 @@
 @extends('layouts.app')
     @section('content')
-            <article class="pb-5">
+            <article class="pb-2">
                 
                 <h1 class="fw-bold m-3">レビューを投稿しませんか？</h1>
             

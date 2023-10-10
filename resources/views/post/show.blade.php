@@ -25,7 +25,7 @@ use Illuminate\Support\Facades\Auth;
                 </div>
                 
                 <h1 class="fw-bold m-4 ">{{ $post->class_name }}</h1>
-                <div class="card pb-5">
+                <div class="card pb-2">
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item">
                             <h4><span class="fw-bold">担当教員:</span>&emsp;{{ $post->teacher_name }}</h4>
