@@ -28,51 +28,51 @@
                         <th id="sat" style="width: 15%" class="p-1 bg-secondary text-white border th">土</th>
                     </tr>
                     <tr>
-                        <th class="p-0 my-auto time bg-secondary-subtle border-top border-white th" style="height: 120px">一限目</th>
-                        <td id="mon1" class="p-0 border border-white"></td>
-                        <td id="tue1" class="p-0 border border-white"></td>
-                        <td id="wed1" class="p-0 border border-white"></td>
-                        <td id="thu1" class="p-0 border border-white"></td>
-                        <td id="fri1" class="p-0 border border-white"></td>
-                        <td id="sat1" class="p-0 border border-white"></td>
+                        <th class="p-0 my-auto time bg-secondary-subtle border-top border-dark th" style="height: 120px">一限目</th>
+                        <td id="mon1" class="p-0 border border-dark"></td>
+                        <td id="tue1" class="p-0 border border-dark"></td>
+                        <td id="wed1" class="p-0 border border-dark"></td>
+                        <td id="thu1" class="p-0 border border-dark"></td>
+                        <td id="fri1" class="p-0 border border-dark"></td>
+                        <td id="sat1" class="p-0 border border-dark"></td>
                     </tr>
                     <tr>
-                        <th class="p-0 time bg-secondary-subtle border-top border-white th" style="height: 120px">二限目</th>
-                        <td id="mon2" class="p-0 border border-white"></td>
-                        <td id="tue2" class="p-0 border border-white"></td>
-                        <td id="wed2" class="p-0 border border-white"></td>
-                        <td id="thu2" class="p-0 border border-white"></td>
-                        <td id="fri2" class="p-0 border border-white"></td>
-                        <td id="sat2" class="p-0 border border-white"></td>
+                        <th class="p-0 time bg-secondary-subtle border-top border-dark th" style="height: 120px">二限目</th>
+                        <td id="mon2" class="p-0 border border-dark"></td>
+                        <td id="tue2" class="p-0 border border-dark"></td>
+                        <td id="wed2" class="p-0 border border-dark"></td>
+                        <td id="thu2" class="p-0 border border-dark"></td>
+                        <td id="fri2" class="p-0 border border-dark"></td>
+                        <td id="sat2" class="p-0 border border-dark"></td>
                        
                     </tr>
                     <tr>
-                        <th class="p-0 time bg-secondary-subtle border-top border-white th" style="height: 120px">三限目</th>
-                        <td id="mon3" class="p-0 border border-white"></td>
-                        <td id="tue3" class="p-0 border border-white"></td>
-                        <td id="wed3" class="p-0 border border-white"></td>
-                        <td id="thu3" class="p-0 border border-white"></td>
-                        <td id="fri3" class="p-0 border border-white"></td>
-                        <td id="sat3" class="p-0 border border-white"></td>
+                        <th class="p-0 time bg-secondary-subtle border-top border-dark th" style="height: 120px">三限目</th>
+                        <td id="mon3" class="p-0 border border-dark"></td>
+                        <td id="tue3" class="p-0 border border-dark"></td>
+                        <td id="wed3" class="p-0 border border-dark"></td>
+                        <td id="thu3" class="p-0 border border-dark"></td>
+                        <td id="fri3" class="p-0 border border-dark"></td>
+                        <td id="sat3" class="p-0 border border-dark"></td>
                       
                     </tr>
                     <tr>
-                        <th class="p-0 time bg-secondary-subtle border-top border-white th" style="height: 120px">四限目</th>
-                        <td id="mon4" class="p-0 border border-white"></td>
-                        <td id="tue4" class="p-0 border border-white"></td>
-                        <td id="wed4" class="p-0 border border-white"></td>
-                        <td id="thu4" class="p-0 border border-white"></td>
-                        <td id="fri4" class="p-0 border border-white"></td>
-                        <td id="sat4" class="p-0 border border-white"></td>
+                        <th class="p-0 time bg-secondary-subtle border-top border-dark th" style="height: 120px">四限目</th>
+                        <td id="mon4" class="p-0 border border-dark"></td>
+                        <td id="tue4" class="p-0 border border-dark"></td>
+                        <td id="wed4" class="p-0 border border-dark"></td>
+                        <td id="thu4" class="p-0 border border-dark"></td>
+                        <td id="fri4" class="p-0 border border-dark"></td>
+                        <td id="sat4" class="p-0 border border-dark"></td>
                     </tr>
                     <tr>
-                        <th class="p-0 time bg-secondary-subtle border-top border-white th" style="height: 120px">五限目</th>
-                        <td id="mon5" class="p-0 border border-white"></td>
-                        <td id="tue5" class="p-0 border border-white"></td>
-                        <td id="wed5" class="p-0 border border-white"></td>
-                        <td id="thu5" class="p-0 border border-white"></td>
-                        <td id="fri5" class="p-0 border border-white"></td>
-                        <td id="sat5" class="p-0 border border-white"></td>
+                        <th class="p-0 time bg-secondary-subtle border-top border-dark th" style="height: 120px">五限目</th>
+                        <td id="mon5" class="p-0 border border-dark"></td>
+                        <td id="tue5" class="p-0 border border-dark"></td>
+                        <td id="wed5" class="p-0 border border-dark"></td>
+                        <td id="thu5" class="p-0 border border-dark"></td>
+                        <td id="fri5" class="p-0 border border-dark"></td>
+                        <td id="sat5" class="p-0 border border-dark"></td>
                     </tr>
 
                     @foreach($classdata as $classdatum)
@@ -308,7 +308,7 @@
 
                         // 授業の詳細を曜日と時限で取得したＨＴＭＬ要素の子要素に追加する
                         classKadai{{ $class_week_and_time}}.appendChild(classDetail{{ $class_week_and_time}});
-                        classKadai{{ $class_week_and_time}}.setAttribute("class", "bg-primary-subtle p-0 border border-white");
+                        classKadai{{ $class_week_and_time}}.setAttribute("class", "bg-primary-subtle p-0 border border-dark");
                                                 
                     </script>
                     @endforeach
@@ -332,7 +332,7 @@
                                         addClass = document.createElement('a');
                                         addClass.textContent = '+';
                                         addClass.setAttribute("class", "add-class fs-4 text-decoration-none d-flex align-items-center justify-content-center text-black-50");
-                                        addClass.setAttribute("style", "height: 100px");
+                                        addClass.setAttribute("style", "height: 120px");
                                         addClass.href = '{{ route('resource.select', ['week' => $weekDay[$weekDayCount], 'time' => $classTime[$classTimeCount]]) }}'
                                         {{$weekAndTime}}.appendChild(addClass);       
                                 }
