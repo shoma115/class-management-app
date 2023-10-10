@@ -74,38 +74,23 @@
                         <td id="fri5" class="p-0 border border-dark"></td>
                         <td id="sat5" class="p-0 border border-dark"></td>
                     </tr>
+                    @php
+                        $weekday = array("月曜" => "mon", 
+                                     "火曜" => "tue",
+                                     "水曜" => "wed",
+                                     "木曜" => "thu",
+                                     "金曜" => "fri",
+                                     "土曜" => "sat",
+                                    );
+                    @endphp
 
                     @foreach($classdata as $classdatum)
                     @include('modals.modals_classdata.delete_classdata')
                     @include('modals.modals_classdata.add_task')
                     @include('modals.modals_classdata.delete_task')
-                    @if($classdatum->class_week_day === '月曜') 
-                    <?php
-                        $class_week_day = 'mon';
-                    ?> 
-                    @elseif($classdatum->class_week_day === '火曜')
-                    <?php
-                        $class_week_day = 'tue';
-                    ?>
-                    @elseif($classdatum->class_week_day === '水曜')
-                    <?php
-                        $class_week_day = 'wed';
-                    ?>
-                    @elseif($classdatum->class_week_day === '木曜')
-                    <?php
-                        $class_week_day = 'thu';
-                    ?>
-                    @elseif($classdatum->class_week_day === '金曜')
-                    <?php
-                        $class_week_day = 'fri';
-                    ?>
-                    @elseif($classdatum->class_week_day === '土曜')
-                    <?php
-                        $class_week_day = 'sat';
-                    ?>
-                    @endif
                     <!-- mon1,thu2などの変数を指定。これでJSを取得する -->
                     <?php  
+                        $class_week_day = $weekday[$classdatum->class_week_day];
                         $class_week_and_time = $class_week_day . $classdatum->class_time;                         
                     ?>
                     <script>
