@@ -22,10 +22,10 @@
                 @method('patch')
                 <!-- input要素やselectボックスでは、取得したデータをvalueで初期値に設定している -->
                     <div class="d-flex flex-column">
-                        <label>授業名<span style="color:red">【必須】</span></label>
+                        <label class="fs-5 fw-bold">授業名<span style="color:red">【必須】</span></label>
                         <input type="text" name="class_name" value="{{ old('class_name', $classdatum->class_name) }}" required>
 
-                        <label>教員名</label>
+                        <label class="fs-5 fw-bold">教員名</label>
                         <input type="text" name="teacher_name"  value="{{ old('teacher_name', $classdatum->teacher_name) }}" >
 
                         <label class="fs-5 fw-bold">評価方法</label>
@@ -60,10 +60,10 @@
                                             @endfor   
                                     </select>
                                     
-                        <label>授業の場所</label>
+                        <label class="fs-5 fw-bold">授業の場所</label>
                         <input type="text" name="class_place" value="{{ old('class_place', $classdatum->class_place) }}">
 
-                        <label>曜日</label>
+                        <label class="fs-5 fw-bold">曜日</label>
                         <select name="class_week_day">
                             <?php
                                 $week = ['月曜', '火曜', '水曜', '木曜', '金曜', '土曜', '日曜'];
@@ -79,7 +79,7 @@
                             @endfor   
                         </select>
 
-                        <label>時限</label>
+                        <label class="fs-5 fw-bold">時限</label>
                         <select name="class_time">
                             @for($i = 1; $i < 6; $i++)
                                 @if((int)old('class_time') === $i)
@@ -198,7 +198,7 @@
                             });
                         </script>
 
-                        <label>単位数<span style="color:red">【必須】</span></label>
+                        <label class="fs-5 fw-bold">単位数<span style="color:red">【必須】</span></label>
                         <input type="number" name="amount_credit" value="{{ old('amount_credit', $classdatum->amount_credit) }}" required>
                     </div>
                     <button type="submit" class="button-all btn text-white rounded-pill m-2" name="submit" value="create">更新</button>

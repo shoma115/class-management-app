@@ -25,30 +25,34 @@
                 <div class="card">
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item">
-                            <h3><span style="color: #00cc74;">担当の教員</span>&emsp;{{ $classdatum->teacher_name }}</h3>
+                            <h5><span style="color: #00cc74;">教員</span>&emsp;{{ $classdatum->teacher_name }}</h5>
                         </li>
                         <li class="list-group-item">
-                            <h3><span style="color: #00cc74;">評価方法</span>&emsp;{{ $classdatum->evaluation }}</h3>
+                            <h5><span style="color: #00cc74;">評価</span>&emsp;{{ $classdatum->evaluation }}</h5>
                         </li>
                         <li class="list-group-item">
-                            <h3><span style="color: #00cc74;">出席</span>&emsp;{{ $classdatum->attendance }}</h3>
+                            <h5><span style="color: #00cc74;">出席</span>&emsp;{{ $classdatum->attendance }}</h5>
                         </li>
                         <li class="list-group-item">
-                            <h3><span style="color: #00cc74;">授業の場所</span>&emsp;{{ $classdatum->class_place }}</h3>
+                            <h5><span style="color: #00cc74;">場所</span>&emsp;{{ $classdatum->class_place }}</h5>
                         </li>
                         <li class="list-group-item">
-                            <h3><span style="color: #00cc74;">曜日・時限</span>&emsp;{{ $classdatum->class_week_day }}{{ $classdatum->class_time }}限</h3>
+                            <h5><span style="color: #00cc74;">時限</span>&emsp;{{ $classdatum->class_week_day }}{{ $classdatum->class_time }}限</h5>
+                        </li>
+                        <li class="list-group-item">
+                            <h5><span style="color: #00cc74;">単位</span>&emsp;{{ $classdatum->amount_credit }}</h5>
                         </li>    
                         <li class="list-group-item">
-                            <h3><span style="color: #00cc74;">科目枠組1</span>&emsp;{{ $classdatum->division_1 }}</h3>
+                            <h5><span style="color: #00cc74;">枠組1</span>&emsp;{{ $classdatum->division_1 }}</h5>
                         </li>  
                         <li class="list-group-item">
-                            <h3><span style="color: #00cc74;">科目枠組2</span>&emsp;{{ $classdatum->division_2 }}</h3>
+                            <h5><span style="color: #00cc74;">枠組2</span>&emsp;{{ $classdatum->division_2 }}</h5>
                         </li>          
-                        <li class="list-group-item">
-                            <h3><span style="color: #00cc74;">取得可能単位数</span>&emsp;{{ $classdatum->amount_credit }}</h3>
-                        </li>
+                        
                     </ul>                       
-                </div>               
+                </div>
+                <div>
+                    <h1 class="fw-bold m-4 ">課題</h1>
+                </div>
             </article>
         @endsection
