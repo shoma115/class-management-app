@@ -51,8 +51,5 @@
                         
                     </ul>                       
                 </div>
-                <div>
-                    <h1 class="fw-bold m-4 ">課題</h1>
-                </div>
             </article>
         @endsection
