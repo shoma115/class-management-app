@@ -26,11 +26,9 @@ use App\Http\Controllers\UserController;
 
 
 
-
-// トップページを表示するルーティング
-Route::get('/', [ClassDatumController::class, 'index'])->middleware('auth')->name('index');
-
 Auth::routes();
+// トップページを表示するルーティング
+Route::get('/', [ClassDatumController::class, 'read'])->middleware('auth')->name('index');
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->middleware('auth')->name('home');
 
