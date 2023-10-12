@@ -24,7 +24,6 @@ return new class extends Migration
             $table->integer('amount_credit');
             $table->string('evaluation')->nullable(true);
             $table->string('attendance')->nullable(true);
-            $table->timestamp('deadline')->nullable(true);
             $table->string('division_1')->nullable(true);
             $table->string('division_2')->nullable(true);
             $table->timestamps();
