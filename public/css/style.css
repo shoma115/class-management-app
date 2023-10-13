@@ -2,6 +2,47 @@
     font-size: 10px;
 }
 
+.grid {
+  display: grid;
+  grid-template-columns: 0.3fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+.grid2 {
+  display: grid;
+  grid-template-columns: 0.3fr 6fr;
+}
+.grid3 {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr
+}
+.grid4 {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.cell {
+  display: block;
+  border-top: 1px solid #000;
+  border-left: 1px solid #000;
+  text-decoration: none;
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.25);
+	cursor: pointer;
+	transition: all 0.3s ease 0s;
+}
+.cell:hover {
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.25);
+	transform: translateY(-0.1875em);
+}
+
+.name {
+  color: #000;
+}
+.place {
+  background-color: lightblue;
+  border-radius: 10px;
+}
+
 .time {
     writing-mode: vertical-rl;
 }
