@@ -1,16 +1,14 @@
 @extends('layouts.app')
     @section('content')
+    @include('modals.modals_classdata.add_resource_from_classdata')
+            <input id="week" type="hidden" value="{{ $week }}"></input>
+            <input id="time" type="hidden" value="{{ $time }}"></input>
+            <input id="autocompleteRoute" type="hidden" value="{{ route('select.suggest') }}"></input>
             <article>
-                <input id="week" type="hidden" value="{{ $week }}"></input>
-                <input id="time" type="hidden" value="{{ $time }}"></input>
-                <input id="autocompleteRoute" type="hidden" value="{{ route('select.suggest') }}"></input>
-
-                <a href="{{ route('classdata.read') }}">
-                    <img class="back-button" src="{{ asset('backbutton.img\プレゼンテーション4-removebg-preview.png') }}" width="30">
-                </a>
+                <a  class="btn btn-secondary rounded-pill ms-3" href="{{ route('classdata.read') }}">戻る</a>
                 <h1 class="fw-bold m-4">{{ $week }}{{ $time }}限の授業</h1>
                 <div class="m-4">
-                    @include('modals.modals_classdata.add_resource_from_classdata')
+                   
                     <p>
                         時間割に追加する授業を選んでください。<br>
                         追加したい授業が無いときは

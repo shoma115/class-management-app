@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Auth;
             <article>
                 <script src = "{{ asset('question.js/main.js') }}"></script>
                 <a href="{{ route('question.read') }}">
-                    <img class="back-button" src="{{ asset('backbutton.img\プレゼンテーション4-removebg-preview.png') }}" width="30">
+                    <a  class="btn btn-secondary rounded-pill ms-3 mb-2" href="{{ route('classdata.read') }}">戻る</a>
                 </a>
                 
                 @if($question->user_id === Auth::id())

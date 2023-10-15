@@ -3,7 +3,7 @@
     @include('modals.modals_credited.add_resource_from_credited')
     <article>
             <a href="{{ route('credited.read') }}">
-                    <img class="back-button" src="{{ asset('backbutton.img\プレゼンテーション4-removebg-preview.png') }}" width="30">
+                    <a  class="btn btn-secondary rounded-pill ms-3" href="{{ route('classdata.read') }}">戻る</a>
             </a>
             <div class="m-3">
                 <h1>授業一覧</h1>

@@ -72,16 +72,6 @@
 .title {
     padding-left: 20px;
 }
-.back-button {
-    border-radius: 50%;
-    background-color: whitesmoke;
-    border: 1px solid #000;
-    margin-left: 10px;
-}
-.button {
-    display: flex;
-    justify-content: center;
-}
 
 /* 時間割に授業を追加する */
 .add-class:hover {

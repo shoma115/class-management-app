@@ -2,7 +2,7 @@
     @section('content')
             <article>
                 <a href="{{ route('classdata.read') }}">
-                    <img class="back-button" src="{{ asset('backbutton.img\プレゼンテーション4-removebg-preview.png') }}" width="30">
+                    <a  class="btn btn-secondary rounded-pill ms-3" href="{{ route('classdata.read') }}">戻る</a>
                 </a>
                 <!-- 授業情報の編集モーダル -->
                 @include('modals.modals_classdata.edit_classdata')

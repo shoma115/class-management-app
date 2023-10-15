@@ -2,7 +2,7 @@
     @section('content')
             <article>
                 <a href="{{ route('review.read') }}">
-                    <img class="back-button" src="{{ asset('backbutton.img\プレゼンテーション4-removebg-preview.png') }}" width="30">
+                    <a  class="btn btn-secondary rounded-pill ms-3" href="{{ route('classdata.read') }}">戻る</a>
                 </a>
                 <h3 class="fw-bold m-3">授業レビューの投稿</h3>
                 
