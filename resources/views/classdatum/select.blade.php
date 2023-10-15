@@ -1,6 +1,10 @@
 @extends('layouts.app')
     @section('content')
             <article>
+                <input id="week" type="hidden" value="{{ $week }}"></input>
+                <input id="time" type="hidden" value="{{ $time }}"></input>
+                <input id="autocompleteRoute" type="hidden" value="{{ route('select.suggest') }}"></input>
+
                 <a href="{{ route('classdata.read') }}">
                     <img class="back-button" src="{{ asset('backbutton.img\プレゼンテーション4-removebg-preview.png') }}" width="30">
                 </a>
@@ -20,38 +24,6 @@
                     </form>
                     <a href="{{ route('resource.select', ['week' => $week, 'time' => $time] ) }}">検索をクリア</a>
                 </div>
-                <script>
-                     $.ajaxSetup({
-                        headers: { 'X-CSRF-TOKEN': $("[name='csrf-token']").attr("content") },
-                    })
-                    $(document).ready( function() {
-                        $('#searchForm').autocomplete({
-                            source: function(request, response) { 
-                                        
-                                $.ajax({
-                                url: "{{ route('select.suggest') }}",
-                                method: "POST",
-                                data: { 
-                                        search : request.term,
-                                        week : "{{$week}}",
-                                        time : "{{$time}}" 
-                                    },
-                                dataType: "json",
-                                }).done(function(res){
-                                    response(res.suggest);
-                                    console.log(res.suggest);
-                                    
-                                    
-                                }).fail(function(){
-                                        alert('通信の失敗をしました');
-                                });
-                            }
-                        })
-                    })
-                    
-                    
-                </script>
-
                 <table class="table">
                     <tr>
                         <th>授業名</th>
@@ -70,7 +42,7 @@
                     </tr>
                     @endforeach
                 </table>
-    
-                
+
             </article>
+            <script src="{{  asset('js\classdata_autocomplete.js') }}"></script>
         @endsection
