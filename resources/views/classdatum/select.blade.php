@@ -10,7 +10,6 @@
                 <div class="m-4">
                    
                     <p>
-                        時間割に追加する授業を選んでください。<br>
                         追加したい授業が無いときは
                         <a href="{{ route('resource.create', ['week' => $week, 'time' => $time]) }}" role = "button" data-bs-toggle = "modal" data-bs-target = "#addResource">授業を追加する</a>
                     </p>
@@ -18,7 +17,9 @@
                     
                     <form action="{{ route('resource.select', ['week' => $week, 'time' => $time, 'search' => 1] ) }}" method="GET" autocomplete="off">
                         <input type="text" id="searchForm"  name="search" placeholder="授業名で検索">
-                        <button type="submit"><img src="{{ asset('search.img\ei-search.png') }}" width = "20" height = "20"></button>
+                        <button type="submit" class="search-button">
+                            <div class="search icon"></div>
+                        </button>
                     </form>
                     <a href="{{ route('resource.select', ['week' => $week, 'time' => $time] ) }}">検索をクリア</a>
                 </div>

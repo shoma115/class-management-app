@@ -15,7 +15,9 @@
                 </p>
                 <form action="{{ route('credited.select') }}" method="GET" autocomplete="off">
                     <input type="text" id="searchCredited"  name="search" placeholder="授業名で検索">
-                    <button type="submit"><img src="{{ asset('search.img\ei-search.png') }}" width = "20" height = "20"></button>
+                   <button type="submit" class="search-button">
+                            <div class="search icon"></div>
+                        </button>
                 </form>
                 <a href="{{ route('credited.select') }}">検索をクリア</a>
             </div>
