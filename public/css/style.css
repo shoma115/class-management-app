@@ -106,7 +106,7 @@
   box-shadow: 3px 5px 5px rgba(0, 0, 0, .2);
   z-index: 10;
 }
-.create-button::after {
+.create-button:after {
   content: "+";
   color: white;
   position: absolute;
@@ -117,7 +117,54 @@
   opacity: 0.5;
   transition: 0.5s;
 }
-
+.heart-icon {
+  color: #000;
+  position: absolute;
+  margin-top: 6px;
+  margin-left: 5px;
+  width: 13px;
+  height: 13px;
+  border-left: solid 1px black;
+  border-bottom: solid 1px black;
+  background-color: white;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+.heart-icon:before {
+  content: '';
+  position: absolute;
+  top: -9px;
+  left: -1px;
+  width: 13.4px;
+  height: 10px;
+  border-radius: 7px 7px 0 0;
+  border-top: solid 1px black;
+  border-left: solid 1px black;
+  border-right: solid 1px black;
+  background-color: white;
+}
+.heart-icon:after {
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: 11px;
+  width: 10px;
+  height: 13px;
+  border-radius: 0 9px 9px 0;
+  border-top: solid 1px black;
+  border-right: solid 1px black;
+  border-bottom: solid 1px black;
+  background-color: white;
+}
+.delete {
+  background-color: red;
+}
+.delete:before {
+  background-color: red;
+}
+.delete:after {
+  background-color: red;
+}
 
 .pagination {
     display: flex;
