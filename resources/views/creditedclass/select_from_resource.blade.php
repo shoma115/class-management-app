@@ -1,10 +1,9 @@
 @extends('layouts.app')
     @section('content')
     @include('modals.modals_credited.add_resource_from_credited')
+    <input id="autocompleteRoutes" type="hidden" value="{{ route('credited.suggest') }}">
     <article>
-            <a href="{{ route('credited.read') }}">
-                    <a  class="btn btn-secondary rounded-pill ms-3" href="{{ route('classdata.read') }}">戻る</a>
-            </a>
+            <a class="btn btn-secondary rounded-pill ms-3" href="{{ route('credited.read') }}">戻る</a>
             <div class="m-3">
                 <h1>授業一覧</h1>
                 <a href="#" class="create-button" role = "button" data-bs-toggle = "modal" data-bs-target = "#addResource"></a>
@@ -20,33 +19,7 @@
                     {{ $resources->appends(Request::only('search'))->links('vendor.pagination.simple-bootstrap-4') }}
                     {{ $resources->total() }}件中
                     {{ $resources->firstItem() }}〜{{ $resources->lastItem() }} 件を表示
-                </div>
-                <script>
-                     $.ajaxSetup({
-                        headers: { 'X-CSRF-TOKEN': $("[name='csrf-token']").attr("content") },
-                    })
-                    $(document).ready( function() {
-                        $('#searchCredited').autocomplete({
-                            source: function(request, response) { 
-                                        
-                                $.ajax({
-                                url: "{{ route('credited.suggest') }}",
-                                method: "POST",
-                                data: { search : request.term },
-                                dataType: "json",
-                                }).done(function(res){
-                                    response(res.suggest);
-                                    console.log(res.suggest);
-                                    
-                                    
-                                }).fail(function(){
-                                        alert('通信の失敗をしました');
-                                });
-                            }
-                        })
-                    })
-                </script>
-                
+                </div>        
                 <div>
                     <table class="table">
                         <tr>
@@ -67,7 +40,6 @@
                         @endforeach
                     </table>
                 </div>
-    
-                
             </article>
+            <script src="{{ asset('js\credited_class_autocomplete.js') }}"></script>
         @endsection

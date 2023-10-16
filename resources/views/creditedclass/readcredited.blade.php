@@ -8,7 +8,7 @@
                     <h1 class="fw-bold">単位取得済み授業一覧</h1>
                     
                     @foreach($sum_credits as $sum_credit)
-                    <h2>履修済み単位数/卒業要件単位:<br>{{ $sum_credit->sum }}/128</h2>
+                    <h2>履修済み単位数/卒業要件単位:<br>{{ $sum_credit->sum }}/126</h2>
                     <a href="{{ route('credited.needcredit') }}">卒業要件単位と現在の取得単位を見る</a>
                     @endforeach
                 </div>
