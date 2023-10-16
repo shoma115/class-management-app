@@ -7,12 +7,7 @@
             </a>
             <div class="m-3">
                 <h1>授業一覧</h1>
-              
-                <p>
-                    履修済に追加する授業を選んでください。<br>
-                    追加したい授業が無いときは
-                    <a href="#" role = "button" data-bs-toggle = "modal" data-bs-target = "#addResource">授業を追加する</a>
-                </p>
+                <a href="#" class="create-button" role = "button" data-bs-toggle = "modal" data-bs-target = "#addResource"></a>
                 <form action="{{ route('credited.select') }}" method="GET" autocomplete="off">
                     <input type="text" id="searchCredited"  name="search" placeholder="授業名で検索">
                    <button type="submit" class="search-button">
@@ -55,22 +50,19 @@
                 <div>
                     <table class="table">
                         <tr>
+                            <th></th>
                             <th>授業名</th>
                             <th>教員名</th>
                             <th>科目枠組</th>
                             <th>単位数</th>
-                            <th></th>
                         </tr>
                         @foreach($resources as $resource)
                             <tr> 
+                                <td><a href="{{ route('credited.store', $resource) }}" class="button-all p-0 btn text-white rounded-pill btn-sm">登録</a></td>
                                 <td>{{ $resource->class_name }}</td>
                                 <td>{{ $resource->teacher_name }}</td>
                                 <td>{{ $resource->division_1 }}<br>{{ $resource->division_2 }}</td>
                                 <td>{{ $resource->amount_credit }}</td>
-                                
-                                <td class="">
-                                    <a href="{{ route('credited.store', $resource) }}" class="button-all p-0 btn text-white rounded-pill btn-sm">登録</a>
-                                </td>
                             <tr>
                         @endforeach
                     </table>

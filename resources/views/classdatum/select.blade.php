@@ -9,12 +9,8 @@
                 <h1 class="fw-bold m-4">{{ $week }}{{ $time }}限の授業</h1>
                 <div class="m-4">
                    
-                    <p>
-                        追加したい授業が無いときは
-                        <a href="{{ route('resource.create', ['week' => $week, 'time' => $time]) }}" role = "button" data-bs-toggle = "modal" data-bs-target = "#addResource">授業を追加する</a>
-                    </p>
-                    
-                    
+                    <a class="create-button" href="{{ route('resource.create', ['week' => $week, 'time' => $time]) }}" role = "button" data-bs-toggle = "modal" data-bs-target = "#addResource"></a>
+                            
                     <form action="{{ route('resource.select', ['week' => $week, 'time' => $time, 'search' => 1] ) }}" method="GET" autocomplete="off">
                         <input type="text" id="searchForm"  name="search" placeholder="授業名で検索">
                         <button type="submit" class="search-button">
@@ -25,19 +21,19 @@
                 </div>
                 <table class="table">
                     <tr>
+                        <th></th>
                         <th>授業名</th>
                         <th>教員名</th>
                         <th>曜日・時限</th>
                         <th>単位数</th>
-                        <th><th>
                     </tr>
                     @foreach($resources as $resource) 
                     <tr>
+                        <td><a href="{{ route('select.store', $resource) }}" class="button-all btn text-white rounded-pill btn-sm">追加</a></td> 
                         <td>{{ $resource->class_name }}</td>
                         <td>{{ $resource->teacher_name }}</td>
                         <td>{{ $resource->class_week_day . $resource->class_time }}限</td>
                         <td>{{ $resource->amount_credit }}</td>
-                        <td><a href="{{ route('select.store', $resource) }}" class="button-all btn text-white rounded-pill btn-sm">追加</a></td>      
                     </tr>
                     @endforeach
                 </table>

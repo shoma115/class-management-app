@@ -2,12 +2,10 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="addResourceLabel"><span class="fw-bold">{{ $week }}{{ $time }}限の授業を登録</span></h5>
+        <h5 class="modal-title" id="addResourceLabel"><span class="fw-bold">{{ $week }}{{ $time }}限の授業を作成</span></h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="modal-body">
-                <h5>登録した情報は<span style="color: red">ユーザー全体に表示されます</span>。極力正しい情報の入力を心がけていただくようお願いします。<br>不明の部分は空白、もしくは「分からない」をご選択ください</h5>
-               
+      <div class="modal-body"
                 @if($errors->any())
                 <div>
                     <ul>

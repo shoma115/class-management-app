@@ -15,6 +15,9 @@ use Illuminate\Support\Facades\Auth;
                             <div class="search icon"></div>
                         </button>
                     </form>
+                    <div>
+                        <a class="create-button" href="{{ route('review.create') }}"></a>
+                    </div>
                     <a href="{{ route('review.read') }}">検索をクリア</a>
                 </div>
 
@@ -130,9 +133,6 @@ use Illuminate\Support\Facades\Auth;
                         ?> 
                 
                 @endforeach
-                </div>
-                <div>
-                    <a href="{{ route('review.create') }}"><img src="{{ asset('toukou.img\投稿アイコン-removebg-preview.png')}}" class="pen fixed-bottom"></a>
                 </div>
             </article>
 

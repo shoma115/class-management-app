@@ -93,6 +93,31 @@
   vertical-align:top;
   border-radius: 10%;
 }
+.create-button {
+  position: fixed;
+  bottom: 70px;
+  right: 20px;
+  display: block;
+  background-color: #FEC18A  ;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  text-decoration: none;
+  box-shadow: 3px 5px 5px rgba(0, 0, 0, .2);
+  z-index: 10;
+}
+.create-button::after {
+  content: "+";
+  color: white;
+  position: absolute;
+  font-size: 40px;
+  left: 32%;  
+}
+.create-button:hover {
+  opacity: 0.5;
+  transition: 0.5s;
+}
+
 
 .pagination {
     display: flex;

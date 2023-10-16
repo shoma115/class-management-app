@@ -8,10 +8,13 @@
             <div class="m-4">
                 <form action="{{ route('question.read') }}" class="search-form" method="GET" autocomplete="off">
                     <input type="text" id="searchQuestion"  name="search" placeholder="タイトルで質問を検索">
-                   <button type="submit" class="search-button">
+                    <button type="submit" class="search-button">
                             <div class="search icon"></div>
-                        </button>
+                    </button>
                 </form>
+                <div>
+                    <a class="create-button" href="{{ route('question.create') }}"></a>
+                </div>
                 <a href="{{ route('question.read') }}">検索をクリア</a>
             </div>
                 <div class="pagination">
@@ -142,11 +145,6 @@
                     </div>     
                     @endforeach
              </div>
-             <div>
-                    <a href="{{ route('question.create') }}"><img src="{{ asset('toukou.img\投稿アイコン-removebg-preview.png')}}" class="pen fixed-bottom"></a>
-            </div>
-                
-
             </article>
 
                     <script>
