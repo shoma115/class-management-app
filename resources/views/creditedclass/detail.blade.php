@@ -3,7 +3,7 @@
             <article>
                 
                 <a href="{{ route('credited.read') }}">
-                        <a  class="btn btn-secondary rounded-pill ms-3" href="{{ route('classdata.read') }}">戻る</a>
+                        <a  class="btn btn-secondary rounded-pill ms-3" href="{{ route('credited.read') }}">戻る</a>
                 </a>
                 <div class="m-3">
                     <h1 class="fw-bold">取得単位の内訳</h1>

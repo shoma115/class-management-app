@@ -2,7 +2,7 @@
 @extends('layouts.app')
     @section('content')
         <a href="{{ route('mypage.read') }}">
-            <a  class="btn btn-secondary rounded-pill ms-3" href="{{ route('classdata.read') }}">戻る</a>
+            <a  class="btn btn-secondary rounded-pill ms-3" href="{{ route('mypage.read') }}">戻る</a>
         </a>
         <div>
             <h3 class="fw-bold m-4 ">いいねしたレビュー<h3>

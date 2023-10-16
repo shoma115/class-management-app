@@ -2,7 +2,7 @@
     @section('content')
             <article>
                 <a href="{{ route('question.read') }}">
-                    <a  class="btn btn-secondary rounded-pill ms-3" href="{{ route('classdata.read') }}">戻る</a>
+                    <a  class="btn btn-secondary rounded-pill ms-3" href="{{ route('question.read') }}">戻る</a>
                 </a>
                 <h3 class="fw-bold m-3">質問の投稿</h3>
                 @if($errors->any())

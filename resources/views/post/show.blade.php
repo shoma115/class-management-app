@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Auth;
             <article>
                 <div class="review-show">
                     <a href="{{ route('review.read') }}">
-                        <a  class="btn btn-secondary rounded-pill ms-3" href="{{ route('classdata.read') }}">戻る</a>
+                        <a  class="btn btn-secondary rounded-pill ms-3" href="{{ route('review.read') }}">戻る</a>
                     </a>
 
                
