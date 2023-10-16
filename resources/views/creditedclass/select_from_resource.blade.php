@@ -41,5 +41,5 @@
                     </table>
                 </div>
             </article>
-            <script src="{{ asset('js\credited_class_autocomplete.js') }}"></script>
+            <script src="{{ asset('js\creditedclass_select.js') }}"></script>
         @endsection

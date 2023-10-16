@@ -15,8 +15,6 @@ $(document).ready( function() {
             }).done(function(res){
                 response(res.suggest);
                 console.log(res.suggest);
-                
-                
             }).fail(function(){
                     alert('通信の失敗をしました');
             });

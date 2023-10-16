@@ -10,7 +10,7 @@
                 <div class="m-4">
                    
                     <a class="create-button" href="{{ route('resource.create', ['week' => $week, 'time' => $time]) }}" role = "button" data-bs-toggle = "modal" data-bs-target = "#addResource"></a>
-                            
+
                     <form action="{{ route('resource.select', ['week' => $week, 'time' => $time, 'search' => 1] ) }}" method="GET" autocomplete="off">
                         <input type="text" id="searchForm"  name="search" placeholder="授業名で検索">
                         <button type="submit" class="search-button">
@@ -39,5 +39,5 @@
                 </table>
 
             </article>
-            <script src="{{  asset('js\classdata_autocomplete.js') }}"></script>
+            <script src="{{  asset('js\classdata_select.js') }}"></script>
         @endsection
