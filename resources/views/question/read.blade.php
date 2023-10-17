@@ -1,7 +1,9 @@
 @extends('layouts.app')
     @section('content')
-            <article>
-        
+        <input id="questionAutocompleteRoute" type="hidden" value="{{ route('question.suggest') }}">
+        <input id="questionNiceDecreseRoute" type="hidden" value="{{ route('questionnice.decrease') }}">
+        <input id="questionNiceIncreseRoute" type="hidden" value="{{ route('questionnice.increase') }}">          
+        <article>
             <h1 class="title fw-bold">鹿大生なんでもQ&A</h1>
 
             <!-- ここから検索フォーム -->
@@ -22,34 +24,6 @@
                     {{ $questions->total() }}件中
                     {{ $questions->firstItem() }}〜{{ $questions->lastItem() }} 件を表示
                 </div>
-
-                <!-- ajaxを使用したautocomplete -->
-                <script>
-                     $.ajaxSetup({
-                        headers: { 'X-CSRF-TOKEN': $("[name='csrf-token']").attr("content") },
-                    })
-                    $(document).ready( function() {
-                        $('#searchQuestion').autocomplete({
-                            source: function(request, response) { 
-                                        
-                                $.ajax({
-                                url: "{{ route('question.suggest') }}",
-                                method: "POST",
-                                data: { search : request.term },
-                                dataType: "json",
-                                }).done(function(res){
-                                    response(res.suggest);
-                                    console.log(res.suggest);
-                                    
-                                    
-                                }).fail(function(){
-                                        alert('通信の失敗をしました');
-                                });
-                            }
-                        })
-                    })
-                </script>
-
             @if($mine === "done") 
                 <ul class="nav nav-tabs">
                     <li class="nav-item">
@@ -68,22 +42,7 @@
                         <a id="item2" class="nav-link" aria-current="page" href="{{ route('question.mine')}}">あなたの質問</a>
                     </li>
                 </ul>
-            @endif
-
-            <script>
-                const navItem1 = document.getElementById('item1');
-                const navItem2 = document.getElementById('item2');
-                
-                navItem1.addEventListener('click', () => {
-                    navItem1.classList.add("active");
-                    navItem2.removeClass("active");
-                })
-                    navItem2.addEventListener('click', () => {
-                    navItem2.classList.add("active");
-                    navItem1.removeClass("active");
-                    })
-            </script>
-            
+            @endif            
             </div>
             <div>
                     @foreach($questions as $question)
@@ -109,9 +68,9 @@
                                     @foreach($nice_arrays as $nice_array)
                                     <!-- ログイン中のユーザがいいねボタンを既に押しているとき -->
                                         @if($nice_array->user_id === $user_id)
-                                        <span class="delete" data-questionid="{{ $question->id }}">
-                                            <img class="nice-image" src="{{ asset('nice.img/23636740.png') }}" width = "30" height = "25">
-                                            {{$sum_nice[$id]}}
+                                        <span data-questionid="{{ $question->id }}">
+                                            <span class="heart-icon delete"></span>
+                                            <span class="m-4 number-of-nice">{{$sum_nice[$id]}}</span>
                                         </span>
                                         <?php
                                             $i = 1;
@@ -120,17 +79,17 @@
                                     @endforeach
                                 <!-- ログイン中のユーザがいいねボタンを押していないとき（いいねが他にある時） -->
                                     @if($i === 0)
-                                        <span class="nice-button" data-questionid="{{ $question->id }}">
-                                            <img class="nice-image" src="{{ asset('nice.img/23636735.png') }}" width = "30" height = "25">
-                                            {{$sum_nice[$id]}}
-                                        </span>         
+                                        <span data-questionid="{{ $question->id }}">
+                                            <span class="heart-icon nice-button"></span>
+                                            <span class="m-4 number-of-nice">{{$sum_nice[$id]}}</span>
+                                        </span>        
                                     @endif
                                     <!-- ログイン中のユーザがいいねボタンを押していない時（いいねが他に無い時。他にいいねがないと空配列が送られ、キーが無いためエラーになる。そのためこのように表示を分けている） -->
-                                @else         
-                                    <span class="nice-button" data-questionid="{{ $question->id }}">
-                                            <img class="nice-image" src="{{ asset('nice.img/23636735.png') }}" width = "30" height = "25">
-                                            0
-                                    </span>
+                                @else    
+                                    <span data-questionid="{{ $question->id }}">
+                                        <span class="heart-icon nice-button"></span>
+                                        <span class="m-4 number-of-nice">0</span>
+                                    </span>     
                                 @endif
                             </div>
                              <!-- 解決済みかどうかを判別 -->
@@ -146,52 +105,5 @@
                     @endforeach
              </div>
             </article>
-
-                    <script>
-                        // いいねを付ける、消すときのajax処理
-                        // ajaxのセットアップ。ヘッダーに組み込んだcsrf-tokenを読み込み
-                            $.ajaxSetup({
-                                headers: { 'X-CSRF-TOKEN': $("[name='csrf-token']").attr("content") },
-                            })
-                            $('span').on('click', function(){
-                                var questionId = $(this).data('questionid');
-                                var button = $(this);
-                                var className = button.attr("class");
-                                // いいねを付けていない時にいいねボタンを押す（いいねを付ける）
-                                if(className === "nice-button") {            
-                                    $.ajax({
-                                    url: "{{ route('questionnice.increase') }}",
-                                    method: "POST",
-                                    data: { question_id : questionId },
-                                    dataType: "json",
-                                    }).done(function(res){
-                                        button.html('<img src="{{ asset('nice.img/23636740.png') }}"  width = "30" height = "25">' + res.sum_nice);
-                                        button.addClass('delete');
-                                        button.removeClass('nice-button');
-                                        
-                                    }).fail(function(){
-                                            alert('通信の失敗をしました');
-                                    });
-                                    // いいねを付けている時にいいねを押す（いいねを消す）
-                                }else if(className === "delete") {            
-                                    $.ajax({
-                                    url: "{{ route('questionnice.decrease') }}",
-                                    method: "POST",
-                                    data: { delete_id : questionId },
-                                    dataType: "json",
-                                    }).done(function(res){
-                                        var result = button.html('<img src="{{ asset('nice.img/23636735.png') }}"  width = "30" height = "25">' + res.sum_nice);
-                                        button.addClass('nice-button');
-                                        button.removeClass('delete');
-                                        console.log(res.sum_nice);
-                                    }).fail(function(){
-                                            alert('通信の失敗をしました');
-                                    });
-                                }
-                            });
-                            
-
-                            
-                        </script>
-                    
+                <script src="{{ asset('js\question_read.js') }}" ></script>       
        @endsection
