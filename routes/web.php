@@ -148,21 +148,21 @@ Route::delete('/answer/{answer}/{question}/delete', [AnswerController::class, 'd
 
 // nice
 // いいねをDBへ
-Route::post('/nice/increace', [NiceController::class,'store'])->name('nice.store');
+Route::post('/nice/post/increace', [NiceController::class,'store'])->name('nice.store');
 // いいねを削除
-Route::post('/nice/decrease', [NiceController::class, 'destroy'])->name('nice.delete');
+Route::post('/nice/post/decrease', [NiceController::class, 'destroy'])->name('nice.delete');
 
 // QuestionNice
 // いいねをDBへ
-Route::post('/question-nice/increace', [QuestionNiceController::class,'store'])->name('questionnice.increase');
+Route::post('/nice/question/increace', [QuestionNiceController::class,'store'])->name('questionnice.increase');
 // いいねを削除
-Route::post('/question-nice/decrease', [QuestionNiceController::class, 'destroy'])->name('questionnice.decrease');
+Route::post('/nice/question/decrease', [QuestionNiceController::class, 'destroy'])->name('questionnice.decrease');
 
 // answerNice
 // いいねをDBへ
-Route::post('/answer/increace/nice', [AnswerNiceController::class,'store'])->name('answernice.increase');
+Route::post('/nice/answer/increace', [AnswerNiceController::class,'store'])->name('answernice.increase');
 // いいねを削除
-Route::post('/answer/decrease/nice', [AnswerNiceController::class, 'destroy'])->name('answernice.decrease');
+Route::post('/nice/answer/decrease', [AnswerNiceController::class, 'destroy'])->name('answernice.decrease');
 
 
 
