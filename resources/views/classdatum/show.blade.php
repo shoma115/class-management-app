@@ -8,7 +8,7 @@
                 @include('modals.modals_classdata.edit_classdata')
                 @include('modals.modals_classdata.delete_classdata')
                 @include('modals.modals_classdata.add_credited_from')
-                <div class="button">
+                <div class="button d-flex justify-content-center">
                     <button type="button" class="btn btn-outline-secondary rounded-pill mx-2 mt-5" data-bs-toggle = "modal" data-bs-target = "#editClassDatum{{ $classdatum->id }}">
                         <img src="{{ asset('edit.img\ブログの投稿、編集アイコン素材.png') }}" width="30">編集
                     </button>
