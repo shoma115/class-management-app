@@ -4,7 +4,7 @@
         <input id="questionNiceDecreseRoute" type="hidden" value="{{ route('questionnice.decrease') }}">
         <input id="questionNiceIncreseRoute" type="hidden" value="{{ route('questionnice.increase') }}">          
         <article>
-            <h1 class="title fw-bold">鹿大生なんでもQ&A</h1>
+            <h1 class="title fw-bold">Q&A</h1>
 
             <!-- ここから検索フォーム -->
             <div class="m-4">
@@ -51,7 +51,8 @@
                             <div>
                                 <h5 class = "card-title"> {{ $question->title }}</h5>
                                 <a href = "{{ route('question.show', $question) }}" >スレッドを開く</a>
-                                <span class="inline-block"><img src = "{{ asset('question.img/fukidashi_bw03.png') }}" width = "25" height = "20" alt = "回答数">{{ $question->comments }}</span>
+                                <span class="chat icon"></span>
+                                <span class="m-4">{{ $question->comments }}</span>
                                 
                                 <?php
                                     $id = (string)$question->id;
