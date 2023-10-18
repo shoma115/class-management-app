@@ -1,6 +1,6 @@
 var questionAutocompleteRoute = $("#questionAutocompleteRoute").val();
 var questionNiceIncreseRoute = $("#questionNiceIncreseRoute").val();
-var questionNiceDecreseRoute = $("#questionNiceDecreseRoute").val();
+var questionNiceDecreseRoute = $("#questionNiceDecreseRoute").val(); 
 
 // autocomplete機能
 $.ajaxSetup({
@@ -26,19 +26,6 @@ $(document).ready( function() {
         }
     })
 })
-
-// ナビの切り替え
-const navItem1 = document.getElementById('item1');
-                const navItem2 = document.getElementById('item2');
-                
-                navItem1.addEventListener('click', () => {
-                    navItem1.classList.add("active");
-                    navItem2.removeClass("active");
-                })
-                    navItem2.addEventListener('click', () => {
-                    navItem2.classList.add("active");
-                    navItem1.removeClass("active");
-                    })
 
 // いいね機能
 $.ajaxSetup({

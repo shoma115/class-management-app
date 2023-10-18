@@ -24,7 +24,7 @@
                     {{ $questions->total() }}件中
                     {{ $questions->firstItem() }}〜{{ $questions->lastItem() }} 件を表示
                 </div>
-            @if($mine === "done") 
+            @if($my_question === true) 
                 <ul class="nav nav-tabs">
                     <li class="nav-item">
                         <a id="item1" class="nav-link" aria-current="page" href="{{ route('question.read') }}">みんなの質問</a>

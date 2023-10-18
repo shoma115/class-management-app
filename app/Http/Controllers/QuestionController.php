@@ -22,9 +22,7 @@ class QuestionController extends Controller
             return $count_nice->sum('count');
         });
 
-        $mine = "not";
-
-        return view('question.read', ['questions' => $questions, 'sum_nice' => $sumNice, 'group_by' => $groupBy, 'mine' => $mine]);
+        return view('question.read', ['questions' => $questions, 'sum_nice' => $sumNice, 'group_by' => $groupBy, 'my_question' => false]);
     }
     // 質問作成ページの表示
     public function create() {
@@ -127,9 +125,7 @@ class QuestionController extends Controller
             return $count_nice->sum('count');
         });
 
-        $mine = "done";
-
-        return view('question.read', ['questions' => $questions, 'sum_nice' => $sumNice, 'group_by' => $groupBy, 'mine' => $mine]);
+        return view('question.read', ['questions' => $questions, 'sum_nice' => $sumNice, 'group_by' => $groupBy, 'my_question' => true]);
 
     }
     
