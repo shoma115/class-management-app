@@ -1,9 +1,9 @@
 @extends('layouts.app')
     @section('content')
     @include('modals.modals_classdata.add_resource_from_classdata')
-            <input id="week" type="hidden" value="{{ $week }}"></input>
-            <input id="time" type="hidden" value="{{ $time }}"></input>
-            <input id="autocompleteRoute" type="hidden" value="{{ route('select.suggest') }}"></input>
+            <input class="form-control" id="week" type="hidden" value="{{ $week }}"></input>
+            <input class="form-control" id="time" type="hidden" value="{{ $time }}"></input>
+            <input class="form-control" id="autocompleteRoute" type="hidden" value="{{ route('select.suggest') }}"></input>
             <article>
                 <a  class="btn btn-secondary rounded-pill ms-3" href="{{ route('classdata.read') }}">戻る</a>
                 <h1 class="fw-bold m-4">{{ $week }}{{ $time }}限の授業</h1>

@@ -70,7 +70,7 @@
                                 <td>
                                     <select class="form-control" name="evaluation">
                                     <?php
-                                            $evaluation = ['分らない','テスト(1回)のみ', 'テスト(複数回)のみ', 'レポート(期末あり)のみ', 'レポート(期末なし)のみ', '出席のみ', 'テスト+レポート', 'レポート+出席', 'テスト+出席', 'テスト+レポート+出席'];
+                                            $evaluation = ['テスト(1回)のみ', 'テスト(複数回)のみ', 'レポート(期末あり)のみ', 'レポート(期末なし)のみ', '出席のみ', 'テスト+レポート', 'レポート+出席', 'テスト+出席', 'テスト+レポート+出席'];
                                         ?>
                                             @for($i = 0; $i < count($evaluation); $i++)
                                                 @if( old('evaluation') === $evaluation[$i])
@@ -91,7 +91,7 @@
                                 <td>
                                     <select class="form-control" name="attendance">
                                         <?php
-                                            $attendance = ['分らない', '毎回とる', 'たまにとる', 'とらない'];
+                                            $attendance = [ '毎回とる', 'たまにとる', 'とらない'];
                                         ?>
                                             @for($i = 0; $i < count($attendance); $i++)
                                                 @if( old('attendance') === $attendance[$i])

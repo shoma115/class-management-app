@@ -25,19 +25,19 @@
                 <!-- input要素やselectボックスでは、取得したデータをvalueで初期値に設定している -->
                     <div class="d-flex flex-column">
                         <label class="fw-bold">授業名<span style="color:red">【必須】</span></label>
-                        <input type="text" name="class_name" value="{{ old('class_name', $post->class_name) }}" required>
+                        <input class="form-control" type="text" name="class_name" value="{{ old('class_name', $post->class_name) }}" required>
 
                         <label class="fw-bold">楽単</label>
                             <div class="difficulty_level">
                                 @for( $i = 5; $i > 0 ; $i--)
                                     @if((int)old('difficulty_level') === $i)
-                                        <input id="difficulty_level{{$i}}" type="radio" name="difficulty_level" value="{{$i}}" checked>
+                                        <input class="form-control" id="difficulty_level{{$i}}" type="radio" name="difficulty_level" value="{{$i}}" checked>
                                         <label for="difficulty_level{{$i}}">★</label>
                                     @elseif($post->difficulty_level === $i)                                           
-                                        <input id="difficulty_level{{$i}}" type="radio" name="difficulty_level" value="{{$i}}" checked>
+                                        <input class="form-control" id="difficulty_level{{$i}}" type="radio" name="difficulty_level" value="{{$i}}" checked>
                                         <label for="difficulty_level{{$i}}">★</label>
                                     @else
-                                        <input id="difficulty_level{{$i}}" type="radio" name="difficulty_level" value="{{$i}}">
+                                        <input class="form-control" id="difficulty_level{{$i}}" type="radio" name="difficulty_level" value="{{$i}}">
                                         <label for="difficulty_level{{$i}}">★</label>
                                     @endif
                                 @endfor
@@ -48,22 +48,22 @@
                                     <div class="interesting">
                                         @for( $i = 5; $i > 0 ; $i--)
                                             @if((int)old('interesting') === $i)                                          
-                                                <input id="interesting{{$i}}" type="radio" name="interesting" value="{{$i}}" checked>
+                                                <input class="form-control" id="interesting{{$i}}" type="radio" name="interesting" value="{{$i}}" checked>
                                                 <label for="interesting{{$i}}">★</label>
                                             @elseif($post->interesting === $i)
-                                                <input id="interesting{{$i}}" type="radio" name="interesting" value="{{$i}}" checked>
+                                                <input class="form-control" id="interesting{{$i}}" type="radio" name="interesting" value="{{$i}}" checked>
                                                 <label for="interesting{{$i}}">★</label>
                                             @else
-                                                <input id="interesting{{$i}}" type="radio" name="interesting" value="{{$i}}">
+                                                <input class="form-control" id="interesting{{$i}}" type="radio" name="interesting" value="{{$i}}">
                                                 <label for="interesting{{$i}}">★</label>
                                             @endif
                                         @endfor
                                        
                                     </div>
                                     <label class="fw-bold">評価</label>
-                                    <select class="form-control" name="evaluation">
+                                    <select class="form-control" class="form-control" name="evaluation">
                                     <?php
-                                            $evaluation = ['分らない','テスト(1回)のみ', 'テスト(複数回)のみ', 'レポート(期末あり)のみ', 'レポート(期末なし)のみ', '出席のみ', 'テスト+レポート', 'レポート+出席', 'テスト+出席', 'テスト+レポート+出席'];
+                                            $evaluation = ['テスト(1回)のみ', 'テスト(複数回)のみ', 'レポート(期末あり)のみ', 'レポート(期末なし)のみ', '出席のみ', 'テスト+レポート', 'レポート+出席', 'テスト+出席', 'テスト+レポート+出席'];
                                         ?>
                                             @for($i = 0; $i < count($evaluation); $i++)
                                             @if( old('evaluation') === $evaluation[$i])
@@ -77,9 +77,9 @@
                                     </select>
                               
                                     <label class="fw-bold">出席</label>
-                                    <select class="form-control" name="attendance">
+                                    <select class="form-control" class="form-control" name="attendance">
                                     <?php
-                                            $attendance = ['分らない', '毎回とる', 'たまにとる', 'とらない'];
+                                            $attendance = [ '毎回とる', 'たまにとる', 'とらない'];
                                         ?>
                                             @for($i = 0; $i < count($attendance); $i++)
                                             @if( old('evaluation') === $attendance[$i])
@@ -95,10 +95,10 @@
                             
 
                         <label class="fw-bold">教員名</label>
-                        <input type="text" name="teacher_name" value="{{ old('teacher_name', $post->teacher_name) }}">
+                        <input class="form-control" type="text" name="teacher_name" value="{{ old('teacher_name', $post->teacher_name) }}">
 
                         <label class="fw-bold">曜日</label>
-                        <select name="class_week_day" value="{{ $post->class_week_day }}">
+                        <select class="form-control" name="class_week_day" value="{{ $post->class_week_day }}">
                         <?php
                                 $weeks = ['月曜', '火曜', '水曜', '木曜', '金曜', '土曜', '日曜'];
                             ?>
@@ -114,7 +114,7 @@
                         </select>
 
                         <label class="fw-bold">時限</label>
-                        <select name="class_time">
+                        <select class="form-control" name="class_time">
                             @for($i = 1; $i < 6; $i++)
                                 @if((int)old('class_time') === $i)
                                     <option selected>{{ $i }}</option>
@@ -127,12 +127,12 @@
                         </select>
 
                         <label class="fw-bold">単位<span style="color:red">【必須】</span></label>
-                        <input type="number" name="amount_credit" min="1" value="{{ old('amount_credt', $post->amount_credit) }}" required>
+                        <input class="form-control" type="number" name="amount_credit" min="1" value="{{ old('amount_credt', $post->amount_credit) }}" required>
 
                         
                         <label class="fw-bold">レビュー</label>
                        
-                        <textarea name="content" rows="10">{{ old('content', $post->content) }}</textarea>
+                        <textarea class="form-control" name="content">{{ old('content', $post->content) }}</textarea>
                     </div>
                     <button type="submit" class="button-all btn text-white rounded-pill m-1" name="submit" value="create">更新</button>
                 </form>

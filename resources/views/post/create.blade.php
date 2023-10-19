@@ -30,16 +30,16 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <label class="fs-5 fw-bold">単位取得の<br>難しさ</label>
+                                    <label class="fs-5 fw-bold">楽単</label>
                                 </td>
                                 <td>
                                     <div class="difficulty_level">
                                         @for( $i = 5; $i > 0 ; $i--)
                                             @if((int)old('difficulty_level') === $i)                                          
-                                                <input id="difficulty_level{{$i}}" type="radio" name="difficulty_level" value="{{$i}}" checked>
+                                                <input class="form-control" id="difficulty_level{{$i}}" type="radio" name="difficulty_level" value="{{$i}}" checked>
                                                 <label for="difficulty_level{{$i}}">★</label>
                                             @else
-                                                <input id="difficulty_level{{$i}}" type="radio" name="difficulty_level" value="{{$i}}">
+                                                <input class="form-control" id="difficulty_level{{$i}}" type="radio" name="difficulty_level" value="{{$i}}">
                                                 <label for="difficulty_level{{$i}}">★</label>
                                             @endif
                                         @endfor
@@ -55,10 +55,10 @@
                                     <div class="interesting">
                                         @for( $i = 5; $i > 0 ; $i--)
                                             @if((int)old('interesting') === $i)                                          
-                                                <input id="interesting{{$i}}" type="radio" name="interesting" value="{{$i}}" checked>
+                                                <input class="form-control" id="interesting{{$i}}" type="radio" name="interesting" value="{{$i}}" checked>
                                                 <label for="interesting{{$i}}">★</label>
                                             @else
-                                                <input id="interesting{{$i}}" type="radio" name="interesting" value="{{$i}}">
+                                                <input class="form-control" id="interesting{{$i}}" type="radio" name="interesting" value="{{$i}}">
                                                 <label for="interesting{{$i}}">★</label>
                                             @endif
                                         @endfor
@@ -107,7 +107,7 @@
                             
                             <tr>
                                 <td>
-                                    <label class="fs-5 fw-bold">教員名</label>
+                                    <label class="fs-5 fw-bold">教員</label>
                                 </td>
                                 <td>
                                     <input class="form-control" type="text" name="teacher_name" value="{{ old('teacher_name') }}">
