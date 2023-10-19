@@ -36,7 +36,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->midd
 // マイページを表示する
 Route::get('/mypage', [UserController::class, 'read'])->middleware('auth')->name('mypage.read');
 // ユーザー名の更新
-Route::post('/mypage/{user}', [UserController::class, 'update'])->middleware('auth')->name('user.update');
+Route::patch('/mypage/{user}', [UserController::class, 'update'])->middleware('auth')->name('user.update');
 // いいねしたレビューを表示
 Route::get('/mypage/review', [UserController::class, 'nice_review'])->middleware('auth')->name('nice.review');
 // いいねした質問を表示

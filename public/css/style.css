@@ -193,6 +193,10 @@
 .editFrom {
   display: none;
 }
+/* マイページの名前編集フォーム */
+#editUserForm {
+  display: none;
+}
 
 .pagination {
     display: flex;
