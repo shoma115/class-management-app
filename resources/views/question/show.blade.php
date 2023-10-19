@@ -29,7 +29,7 @@ use Illuminate\Support\Facades\Auth;
                         </div>
                     
                 @endif
-                <div class="pb-4" id = "questionBody">
+                <div id = "questionBody">
 
                     <div class="card">
                         
@@ -59,7 +59,7 @@ use Illuminate\Support\Facades\Auth;
                     </div>
                 </form>
                 
-                <h5 class="mt-4 fw-bold border-top">返信一覧</h5>
+                <h5 class="m-1 fw-bold">返信一覧</h5>
                  <!-- 回答を全て表示 -->
                 @foreach($answers as $answer)
                     <!--　回答の削除のモーダル -->

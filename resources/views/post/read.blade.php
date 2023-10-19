@@ -33,8 +33,8 @@ use Illuminate\Support\Facades\Auth;
                     <div class="card">
                         <div class="card-body">
                             <h5 class="card-title fw-bold">{{ $post->class_name }}</h5>
-                            <h5 class="card-text m-0"><span>単位取得の難しさ:</span>&emsp;<span class="fs-1" style="color: #ffcc00;">{{ str_repeat('★', $post->difficulty_level) }}</span><span class="fs-1" style="color: #ccc;">{{ str_repeat('★', 5 - $post->difficulty_level) }}</span></h5>
-                            <h5 class="card-text mb-3"><span>内容の面白さ:</span>&emsp;<span class="fs-1" style="color: #ffcc00;">{{ str_repeat('★', $post->interesting) }}</span><span class="fs-1" style="color: #ccc;">{{ str_repeat('★', 5 - $post->interesting) }}</span></h5>
+                            <h5 class="card-text m-0"><span>楽単:</span>&emsp;<span class="fs-1" style="color: #ffcc00;">{{ str_repeat('★', $post->difficulty_level) }}</span><span class="fs-1" style="color: #ccc;">{{ str_repeat('★', 5 - $post->difficulty_level) }}</span></h5>
+                            <h5 class="card-text mb-3"><span>学び:</span>&emsp;<span class="fs-1" style="color: #ffcc00;">{{ str_repeat('★', $post->interesting) }}</span><span class="fs-1" style="color: #ccc;">{{ str_repeat('★', 5 - $post->interesting) }}</span></h5>
                             <a class="card-link inline-block" href="{{ route('review.show', $post) }}">詳細を見る</a>
                         
                             <?php

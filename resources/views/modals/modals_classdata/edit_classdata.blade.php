@@ -28,7 +28,7 @@
                         <label class="fs-5 fw-bold">教員名</label>
                         <input type="text" name="teacher_name"  value="{{ old('teacher_name', $classdatum->teacher_name) }}" >
 
-                        <label class="fs-5 fw-bold">評価方法</label>
+                        <label class="fs-5 fw-bold">評価</label>
                                     <select name="evaluation">
                                         <?php
                                             $evaluation = ['分らない','テスト(1回)のみ', 'テスト(複数回)のみ', 'レポート(期末あり)のみ', 'レポート(期末なし)のみ', '出席のみ', 'テスト+レポート', 'レポート+出席', 'テスト+出席', 'テスト+レポート+出席'];

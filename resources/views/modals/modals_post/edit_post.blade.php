@@ -27,7 +27,7 @@
                         <label class="fw-bold">授業名<span style="color:red">【必須】</span></label>
                         <input type="text" name="class_name" value="{{ old('class_name', $post->class_name) }}" required>
 
-                        <label class="fw-bold">単位取得の難しさ</label>
+                        <label class="fw-bold">楽単</label>
                             <div class="difficulty_level">
                                 @for( $i = 5; $i > 0 ; $i--)
                                     @if((int)old('difficulty_level') === $i)
@@ -44,7 +44,7 @@
                                        
                             </div>
 
-                            <label class="fw-bold">内容の面白さ</label>
+                            <label class="fw-bold">学び</label>
                                     <div class="interesting">
                                         @for( $i = 5; $i > 0 ; $i--)
                                             @if((int)old('interesting') === $i)                                          
@@ -60,7 +60,7 @@
                                         @endfor
                                        
                                     </div>
-                                    <label class="fw-bold">評価方法</label>
+                                    <label class="fw-bold">評価</label>
                                     <select class="form-control" name="evaluation">
                                     <?php
                                             $evaluation = ['分らない','テスト(1回)のみ', 'テスト(複数回)のみ', 'レポート(期末あり)のみ', 'レポート(期末なし)のみ', '出席のみ', 'テスト+レポート', 'レポート+出席', 'テスト+出席', 'テスト+レポート+出席'];
@@ -126,7 +126,7 @@
                             @endfor 
                         </select>
 
-                        <label class="fw-bold">取得可能単位数<span style="color:red">【必須】</span></label>
+                        <label class="fw-bold">単位<span style="color:red">【必須】</span></label>
                         <input type="number" name="amount_credit" min="1" value="{{ old('amount_credt', $post->amount_credit) }}" required>
 
                         

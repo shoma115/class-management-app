@@ -24,7 +24,7 @@
                         <th></th>
                         <th>授業名</th>
                         <th>教員名</th>
-                        <th>曜日・時限</th>
+                        <th>時限</th>
                         <th>単位数</th>
                     </tr>
                     @foreach($resources as $resource) 

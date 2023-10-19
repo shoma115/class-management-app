@@ -28,27 +28,27 @@ use Illuminate\Support\Facades\Auth;
                 <div class="card pb-2">
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item">
-                            <h4><span class="fw-bold">担当教員:</span>&emsp;{{ $post->teacher_name }}</h4>
+                            <h4><span class="fw-bold">教員:</span>&emsp;{{ $post->teacher_name }}</h4>
                                 
                         </li>
                         <li class="list-group-item">
-                            <h4><span class="fw-bold">単位取得の難しさ:</span>&emsp;<span class="fs-1" style="color: #ffcc00;">{{ str_repeat('★', $post->difficulty_level) }}</span><span class="fs-1" style="color: #ccc;">{{ str_repeat('★', 5 - $post->difficulty_level) }}</span></h4>
+                            <h4><span class="fw-bold">楽単:</span>&emsp;<span class="fs-1" style="color: #ffcc00;">{{ str_repeat('★', $post->difficulty_level) }}</span><span class="fs-1" style="color: #ccc;">{{ str_repeat('★', 5 - $post->difficulty_level) }}</span></h4>
                                 
                         </li>
                         <li class="list-group-item">
-                            <h4><span class="fw-bold">内容の面白さ:</span>&emsp;<span class="fs-1" style="color: #ffcc00;">{{ str_repeat('★', $post->interesting) }}</span><span class="fs-1" style="color: #ccc;">{{ str_repeat('★', 5 - $post->interesting) }}</span></h4>
+                            <h4><span class="fw-bold">学び:</span>&emsp;<span class="fs-1" style="color: #ffcc00;">{{ str_repeat('★', $post->interesting) }}</span><span class="fs-1" style="color: #ccc;">{{ str_repeat('★', 5 - $post->interesting) }}</span></h4>
                         </li>
                         <li class="list-group-item">
-                            <h4><span class="fw-bold">評価方法:</span>&emsp;{{ $post->evaluation }}</h4>
+                            <h4><span class="fw-bold">評価:</span>&emsp;{{ $post->evaluation }}</h4>
                         </li>
                         <li class="list-group-item">
                             <h4><span class="fw-bold">出席:</span>&emsp;{{ $post->attendance }}</h4>
                         </li>
                         <li class="list-group-item">
-                            <h4><span class="fw-bold">曜日・時限:</span>&emsp;{{ $post->class_week_day }}{{ $post->class_time }}限</h3>
+                            <h4><span class="fw-bold">時限:</span>&emsp;{{ $post->class_week_day }}{{ $post->class_time }}限</h3>
                         </li>
                         <li class="list-group-item">
-                            <h4><span class="fw-bold">取得可能単位数:</span>&emsp;{{ $post->amount_credit }}</h3>
+                            <h4><span class="fw-bold">単位:</span>&emsp;{{ $post->amount_credit }}</h3>
                             
                         </li>
                         <li class="list-group-item">

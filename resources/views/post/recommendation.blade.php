@@ -27,7 +27,7 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <label class="fs-5 fw-bold">単位取得の<br>難しさ</label>
+                                    <label class="fs-5 fw-bold">楽単</label>
                                 </td>
                                 <td>
                                     <div class="difficulty_level">
@@ -46,7 +46,7 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <label class="fs-5 fw-bold">内容の面白さ</label>
+                                    <label class="fs-5 fw-bold">学び</label>
                                 </td>
                                 <td>
                                     <div class="interesting">
@@ -65,7 +65,7 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <label class="fs-5 fw-bold">評価方法</label>
+                                    <label class="fs-5 fw-bold">評価</label>
                                 </td>
                                 <td>
                                     <select class="form-control" name="evaluation">
