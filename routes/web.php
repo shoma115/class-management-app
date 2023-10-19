@@ -142,7 +142,7 @@ Route::get('/question/mine', [QuestionController::class, 'mine'])->middleware('a
 // ここからanswerのルーティング
 Route::post('/answer/{question}/store', [AnswerController::class, 'store'])->middleware('auth')->name('answer.store');
 // update
-Route::post('/answer/{answer}/{question}/update', [AnswerController::class, 'update'])->middleware('auth')->name('answer.update');
+Route::patch('/answer/{answer}/{question}/update', [AnswerController::class, 'update'])->middleware('auth')->name('answer.update');
 // delete
 Route::delete('/answer/{answer}/{question}/delete', [AnswerController::class, 'destroy'])->middleware('auth')->name('answer.delete');
 

@@ -20,15 +20,13 @@
                 <form action="{{ route('question.update', $question) }}" method="POST">
                 @csrf
                 @method('patch')
-                    <div>
-                        <label>質問のタイトル</label>
-                        <input type="text" name="title" value="{{ old('title', $question->title) }}">
-
-                        <label>内容</label>
-                        <textarea name="content">{{ old('content', $question->content) }}</textarea>
+                    <div class="d-flex flex-column">
+                        <label class="fw-bold">質問のタイトル</label>
+                        <input class="form-control" type="text" name="title" value="{{ old('title', $question->title) }}">
+                        <label class="fw-bold">内容</label>
+                        <textarea class="form-control" name="content" rows="5">{{ old('content', $question->content) }}</textarea>
                     </div>
-                    </div>
-                    <button type="submit" class="submit-btn" name="submit" value="create">更新</button>
+                    <button type="submit" class="button-all btn text-white rounded-pill m-2" name="submit" value="create">更新</button>
                 </form>
       </div>
     </div>

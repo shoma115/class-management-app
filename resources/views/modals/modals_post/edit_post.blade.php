@@ -44,7 +44,7 @@
                                        
                             </div>
 
-                            <label class="fs-5 fw-bold">内容の面白さ</label>
+                            <label class="fw-bold">内容の面白さ</label>
                                     <div class="interesting">
                                         @for( $i = 5; $i > 0 ; $i--)
                                             @if((int)old('interesting') === $i)                                          
@@ -60,7 +60,7 @@
                                         @endfor
                                        
                                     </div>
-                                    <label class="fs-5 fw-bold">評価方法</label>
+                                    <label class="fw-bold">評価方法</label>
                                     <select class="form-control" name="evaluation">
                                     <?php
                                             $evaluation = ['分らない','テスト(1回)のみ', 'テスト(複数回)のみ', 'レポート(期末あり)のみ', 'レポート(期末なし)のみ', '出席のみ', 'テスト+レポート', 'レポート+出席', 'テスト+出席', 'テスト+レポート+出席'];
@@ -76,7 +76,7 @@
                                             @endfor   
                                     </select>
                               
-                                    <label class="fs-5 fw-bold">出席</label>
+                                    <label class="fw-bold">出席</label>
                                     <select class="form-control" name="attendance">
                                     <?php
                                             $attendance = ['分らない', '毎回とる', 'たまにとる', 'とらない'];

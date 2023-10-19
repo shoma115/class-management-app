@@ -189,6 +189,10 @@
   border-bottom: solid 1px currentColor;
   border-right: solid 1px currentColor;
 }
+/* Q&Aの回答の編集フォーム */
+.editFrom {
+  display: none;
+}
 
 .pagination {
     display: flex;
