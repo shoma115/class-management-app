@@ -2,23 +2,25 @@
     font-size: 10px;
 }
 
-.grid {
+.week-column {
   display: grid;
-  grid-template-columns: 0.3fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 0.25fr 1fr 1fr 1fr 1fr 1fr;
 }
-.grid2 {
+.line-table-union {
   display: grid;
   grid-template-columns: 0.3fr 6fr;
 }
-.grid3 {
+.lesson-table {
+  font-size: 10px;
+  font-weight: bold;
   display: grid;
   grid-auto-flow: column;
-  grid-template-rows: repeat(5, 1fr);
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr
+  grid-template-rows: repeat(5, 120px);
+  grid-template-columns: repeat(5, 1fr)
 }
-.grid4 {
+.periods-line {
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: repeat(5, 1fr);
 }
 
 .cell {
@@ -196,6 +198,19 @@
 /* マイページの名前編集フォーム */
 #editUserForm {
   display: none;
+}
+.resolved {
+  position: absolute;
+  top: 1rem;
+  right: 3rem;
+  color: red;
+  border-radius: 50%;
+  border: solid 2px currentColor;
+  width: 60px;
+  height: 60px;
+  font-size: 35px;
+  text-align: center;
+  font-weight: bold;
 }
 
 .pagination {

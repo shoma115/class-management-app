@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Auth;
                 
                 @if($question->user_id === Auth::id())
                         <div class="button-parent">
-                            <button type="button" class="btn btn-outline-secondary rounded-pill m-2" id="editQuestion" data-bs-toggle = "modal" data-bs-target = "#editQuestion">>
+                            <button type="button" class="btn btn-outline-secondary rounded-pill m-2" id="editQuestion" data-bs-toggle = "modal" data-bs-target = "#editQuestion">
                                     <img src="{{ asset('edit.img\ブログの投稿、編集アイコン素材.png') }}" width="30">編集
                             </button>
                             
@@ -36,9 +36,7 @@ use Illuminate\Support\Facades\Auth;
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item">
                                 @if($question->resolved === 1)
-                                    <div>
-                                        <img class="m-2" src="{{asset('resolved.img/23926895.png')}}" width="50" height="50">
-                                    </div>
+                                    <div class="resolved">済</div>
                                 @endif
                                 <h5>質問者:&ensp;{{ $question->user->name}}</h5>                   
                                 <h1 class="fw-bold">{{ $question->title }}</h1>

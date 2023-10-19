@@ -96,7 +96,7 @@
                              <!-- 解決済みかどうかを判別 -->
                              <div >
                                 @if($question->resolved === 1)
-                                    <img class="mx-4" src="{{asset('resolved.img/23926895.png')}}" width=50 height=50>
+                                    <div class="resolved">済</div>
                                 @endif
                             </div>
 

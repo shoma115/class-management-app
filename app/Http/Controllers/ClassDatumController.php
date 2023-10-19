@@ -19,7 +19,8 @@ class ClassDatumController extends Controller
     public function read() {
         //１限目～何限目まであるかの数値
         $periods = [1, 2, 3, 4, 5];
-        $weeks = ['月', '火', '水', '木', '金', '土'];
+        $weeks = ['月', '火', '水', '木', '金'];
+        // 連想配列のキーを作るための数値。曜日ごとに0~5の数字を振り、それに一列の授業の数(5限なら5個)を掛けている
         $week_to_number = [
                             '月曜' => 0*count($periods), 
                             '火曜' => 1*count($periods), 

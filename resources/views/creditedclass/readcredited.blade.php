@@ -5,7 +5,7 @@
             <article>
                 
                 <div class="p-3">
-                    <h1 class="fw-bold">単位取得済み授業一覧</h1>
+                    <h1 class="fw-bold">履修済み授業一覧</h1>
                     
                     @foreach($sum_credits as $sum_credit)
                     <h2>履修済み単位数/卒業要件単位:<br>{{ $sum_credit->sum }}/126</h2>
