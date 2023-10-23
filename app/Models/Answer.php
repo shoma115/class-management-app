@@ -9,7 +9,7 @@ use App\Models\Question;
 use App\Models\AnswerNice;
 
 
-class answer extends Model
+class Answer extends Model
 {
     use HasFactory;
 
